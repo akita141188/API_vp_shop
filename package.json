@@ -1,0 +1,20 @@
+{
+  "name": "api_vp_shop_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.11",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "mongoose": "6.10",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0"
+  }
+}
