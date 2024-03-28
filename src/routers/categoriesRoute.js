@@ -1,9 +1,14 @@
 const express = require("express")
 const router = express.Router();
-const CategoryController = require("../apps/controllers/apis/categoriesController")
+const fs = require("fs")
+const path = require("path")
+const CategoriesController = require("../apps/controllers/apis/categoriesController")
 
 
+router.get("/categories", CategoriesController.index)
+router.get("/categories/:id", CategoriesController.show)
+router.post("/categories/create", CategoriesController.createCategory)
+router.get("/categories/:id/products", CategoriesController.products)
 
-router.get("/categories", CategoryController.index)
 
 module.exports = router;

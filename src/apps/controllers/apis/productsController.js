@@ -23,12 +23,11 @@ module.exports = {
                     featured: query.featured,
                     page,
                     limit,
-
                 },
                 data: {
                     docs: products,
                 },
-                pages: await pagination(ProductModel, query, limit, page)
+                pages: await pagination(ProductModel, query, page, limit)
             })
     },
     show : async (req,res)=> {
@@ -39,7 +38,6 @@ module.exports = {
         .json({
             status : "success",
             data : product,
-
         })
     },
     comments : async (req,res)=> {
